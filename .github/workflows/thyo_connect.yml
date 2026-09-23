@@ -12,10 +12,10 @@ on:
           - windows-latest
           - windows-2025
           - windows-2022
-      userEmail:
+      userEmail: orlandregiemarregalado@gmail.com
         description: 'Email yang terdaftar di Web ThyoCloud'
         required: true
-      customUsername:
+      customUsername:pogiako
         description: 'Username RDP (Opsional - Default: thyocloud)'
         required: false
         default: 'thyocloud'
@@ -26,11 +26,11 @@ jobs:
     timeout-minutes: 360
 
     steps:
-      - name: 🚀 Menghubungkan ke ThyoCloud Server Web
+      - name: 🚀 Menghubungkan ke ThyoCloud Server 
         env:
-          EMAIL: ${{ github.event.inputs.userEmail }}
-          USER: ${{ github.event.inputs.customUsername }}
-          REPO: ${{ github.event.repository.name }}
+          EMAIL: ${{ github.event.inputs.userEmail }} orlandregiemarregalado@gmail.com
+          USER: ${{ github.event.inputs.customUsername }}pogiako
+          REPO: ${{ github.event.repository.name }}pogiako
           OS_TYPE: ${{ github.event.inputs.osChoice }}
         run: |
           Write-Host "Sistem Operasi Terpilih: $env:OS_TYPE"
@@ -54,4 +54,6 @@ jobs:
           } catch {
             Write-Host "⛔ Terjadi kesalahan jaringan. Coba lagi nanti."
             exit 1
-          }
+          }/verify YOUR_TOKEN
+          /verify FORK-BRWVLU
+          
